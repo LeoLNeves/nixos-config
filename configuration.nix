@@ -15,6 +15,10 @@
 
   services.openssh.enable = true;
 
+  systemd.services.docker.enable = true;
+  virtualisation.docker.enable = true;
+
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
