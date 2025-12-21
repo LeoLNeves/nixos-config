@@ -1,8 +1,6 @@
 # Initial Version of my NixOS configuration
 
-This is where it begins. This version will only contain the current config and hardware config from /etc/nixos
+Currently theres just a simple flake that points to the config file. There are no modules yet.
 
-This is a very simple config without the use flakes or home manager yet.
-
-This config can be run with: "sudo nixos-rebuild switch -I nixos-config=/PATH_TO/configuration.nix"
+Next steps: Create Hosts folder, and separate the config into some reproducible modules.
 

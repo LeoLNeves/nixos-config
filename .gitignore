@@ -1,0 +1,6 @@
+# Flake build results
+result
+result-*
+
+# Flake lock file (you may want to commit this for reproducibility)
+# flake.lock
