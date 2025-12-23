@@ -3,17 +3,30 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # You can also pin to a specific release like:
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = 
+  { self, nixpkgs, ... }@inputs:
+  let
+    username = "leo";
+    system = "x86_64-linux";
+    pkgs = import nixpkgs {
+      inherit system; # Use the specified system
+      config.allowUnfree = true; # Allow proprietary software
+    };
+    lib = nixpkgs.lib;
+  in
+  {
     nixosConfigurations = {
-      shire = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+      shire = lib.nixosSystem {
+        inherit system;
         modules = [
-          ./configuration.nix
+          ./hosts/shire
         ];
+        specialArgs = {
+          host = "shire";
+          inherit self inputs username;
+        };
       };
     };
   };
