@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = 
@@ -25,6 +27,18 @@
         ];
         specialArgs = {
           host = "shire";
+          inherit self inputs username;
+        };
+      };
+
+      isengard = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/isengard
+          inputs.disko.nixosModules.disko
+        ];
+        specialArgs = {
+          host = "isengard";
           inherit self inputs username;
         };
       };
