@@ -2,6 +2,8 @@
   modulesPath,
   lib,
   pkgs,
+  host,
+  username,
   ...
 } @ args:
 {
@@ -10,6 +12,8 @@
     (modulesPath + "/profiles/qemu-guest.nix")
     ./disk.nix
     ./hardware.nix
+    ./caddy.nix
+    ./navidrome.nix
   ];
   boot.loader.grub = {
     # no need to set devices, disko will add all devices that have a EF02 partition to the list already
@@ -19,25 +23,23 @@
   };
   services.openssh.enable = true;
 
-  networking.hostName = "isengard";
-
-  # Open Firewall
-  networking.firewall.allowedTCPPorts = [ 80 443 ];
-
-  services.caddy = {
-    enable = true;
-    virtualHosts."leonardoneves.com" = {
-      extraConfig = ''
-        root * /var/www/leonardoneves
-        file_server
-      '';
-    };
-  };
+  networking.hostName = host;
 
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
     pkgs.gitMinimal
   ];
+
+  users.users.${username} = {
+      isNormalUser = true;
+      description = "Leonardo";
+      extraGroups = [ "networkmanager" "wheel"];
+      openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDMMw9d91MxgIrOfr5ucAJaIVUCBRog93x21SEbLlGOh leonardo.neves@tecnico.ulisboa.pt"
+      ];
+      packages = with pkgs; [
+      ];
+  };
 
   users.users.root.openssh.authorizedKeys.keys =
   [
