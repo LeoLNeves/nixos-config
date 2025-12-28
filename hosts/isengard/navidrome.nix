@@ -6,7 +6,7 @@
     settings = {
       Address = "127.0.0.1"; # Only listen internally
       Port = 4533;
-      MusicFolder = "/var/lib/music";
+      MusicFolder = "/var/lib/navidrome_vault";
     };
   };
 }
