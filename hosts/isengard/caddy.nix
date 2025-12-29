@@ -9,8 +9,9 @@
 
         "leonardoneves.com" = {
             extraConfig = ''
-            root * /var/www/leonardoneves
+            root * /var/www/personal_website/public
             file_server
+            encode gzip
             '';
         };
 
