@@ -5,10 +5,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
+    personal_website.url = "github:LeoLNeves/personal_website";
+    personal_website.flake = false;
   };
 
   outputs = 
-  { self, nixpkgs, ... }@inputs:
+  { self, nixpkgs, personal_website, ... }@inputs:
   let
     username = "leo";
     system = "x86_64-linux";
@@ -39,7 +41,7 @@
         ];
         specialArgs = {
           host = "isengard";
-          inherit self inputs username;
+          inherit self inputs username personal_website;
         };
       };
     };

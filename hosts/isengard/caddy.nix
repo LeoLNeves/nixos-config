@@ -1,4 +1,4 @@
-{ ... }:
+{ personal-website, ... }:
 {
     # Open Firewall
     networking.firewall.allowedTCPPorts = [ 80 443 ];
@@ -9,7 +9,7 @@
 
         "leonardoneves.com" = {
             extraConfig = ''
-            root * /var/www/personal_website/public
+            root * ${personal-website}
             file_server
             encode gzip
             '';
