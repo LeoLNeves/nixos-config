@@ -36,10 +36,27 @@
         "type": "github"
       }
     },
+    "personal_website": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767118339,
+        "narHash": "sha256-pUY4XWoXGpUmmxS2FVjVO25pYOwc68vTk6KDlDWxSLU=",
+        "owner": "LeoLNeves",
+        "repo": "personal_website",
+        "rev": "130a4fdfd70d77a3330992d8e3cfeaba0e43d0a9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LeoLNeves",
+        "repo": "personal_website",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "disko": "disko",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "personal_website": "personal_website"
       }
     }
   },
