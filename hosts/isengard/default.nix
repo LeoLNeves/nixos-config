@@ -26,6 +26,8 @@
 
   networking.hostName = host;
 
+  nixpkgs.config.allowUnfree = true;
+
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
     pkgs.gitMinimal

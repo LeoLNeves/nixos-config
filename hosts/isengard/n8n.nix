@@ -1,4 +1,4 @@
-{ config, pkgs, domain ... }:
+{ config, pkgs, domain, ... }:
 
 {
   services.n8n = {
