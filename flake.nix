@@ -13,6 +13,7 @@
   { self, nixpkgs, personal_website, ... }@inputs:
   let
     username = "leo";
+    domain = "leonardoneves.com";
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system; # Use the specified system
@@ -41,7 +42,7 @@
         ];
         specialArgs = {
           host = "isengard";
-          inherit self inputs username personal_website;
+          inherit self inputs username domain personal_website;
         };
       };
     };

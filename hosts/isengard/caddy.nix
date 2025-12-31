@@ -1,4 +1,4 @@
-{ personal_website, ... }:
+{ personal_website, domain, ... }:
 {
     # Open Firewall
     networking.firewall.allowedTCPPorts = [ 80 443 ];
@@ -7,19 +7,25 @@
         enable = true;
         virtualHosts = {
 
-        "leonardoneves.com" = {
-            extraConfig = ''
-            root * ${personal_website}
-            file_server
-            encode gzip
-            '';
-        };
+            "${domain}" = {
+                extraConfig = ''
+                root * ${personal_website}
+                file_server
+                encode gzip
+                '';
+            };
 
-        "music.leonardoneves.com" = {
-            extraConfig = ''
-            reverse_proxy localhost:4533
-            '';
-        };
+            "music.${domain}" = {
+                extraConfig = ''
+                reverse_proxy localhost:4533
+                '';
+            };
+
+            "n8n.${domain}" = {
+                extraConfig = ''
+                reverse_proxy localhost:5678
+                '';
+            };
         };
     };
 }
