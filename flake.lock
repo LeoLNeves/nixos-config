@@ -39,11 +39,11 @@
     "personal_website": {
       "flake": false,
       "locked": {
-        "lastModified": 1767118339,
-        "narHash": "sha256-pUY4XWoXGpUmmxS2FVjVO25pYOwc68vTk6KDlDWxSLU=",
+        "lastModified": 1767219499,
+        "narHash": "sha256-qm5wwC5J75XXbxP2TKo/l6xPqMyk7F+4JLDj4FR9Wb8=",
         "owner": "LeoLNeves",
         "repo": "personal_website",
-        "rev": "130a4fdfd70d77a3330992d8e3cfeaba0e43d0a9",
+        "rev": "7a7f8a8ee2938b63a19820b8056cc9db1e8dbb18",
         "type": "github"
       },
       "original": {
