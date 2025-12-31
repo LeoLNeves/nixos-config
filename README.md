@@ -1,4 +1,7 @@
-# Initial Version of my NixOS configuration
+#  my personal NixOS configuration
 
-Next steps: Add Home Manager; switch gnome for hyprland; add neovim;
+2026 goals:
+- add Home Manager
+- add secrets with Agenix
+hny!
 
