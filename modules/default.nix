@@ -11,5 +11,6 @@
         ./services.nix
         ./state.nix
         ./users.nix
+        ./windows.nix
     ];
 }
