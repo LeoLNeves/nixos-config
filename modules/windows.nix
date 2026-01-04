@@ -23,9 +23,4 @@
     ];
   };
 
-  environment.systemPackages = [ pkgs.freerdp ];
-
-  environment.shellAliases = {
-    launch-ea = "wlfreerdp /v:127.0.0.1 /u:docker /p:NixOS1234! /app:program:'||Enterprise Architect' /cert:ignore /network:auto +clipboard /drive:home,$HOME";
-  };
 }
