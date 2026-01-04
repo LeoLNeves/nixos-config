@@ -9,6 +9,9 @@
       VERSION = "11";
       RAM_SIZE = "8G";
       CPU_CORES = "4";
+      PASSWORD = "NixOS1234!";
+
+      WAIT = "N";
     };
     volumes = [
       "/home/leo/winapps-data:/storage"
@@ -23,6 +26,6 @@
   environment.systemPackages = [ pkgs.freerdp ];
 
   environment.shellAliases = {
-    launch-ea = "wlfreerdp /v:127.0.0.1 /u:docker /p:'' /app:'||Enterprise Architect' /network:lan +glyph-cache +clipboard /drive:home,$HOME";
+    launch-ea = "wlfreerdp /v:127.0.0.1 /u:docker /p:NixOS1234! /app:program:'||Enterprise Architect' /cert:ignore /network:auto +clipboard /drive:home,$HOME";
   };
 }
