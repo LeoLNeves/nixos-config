@@ -50,11 +50,12 @@
         inherit system;
         modules = [
           ./hosts/virtus
-        ]
+        ];
         specialArgs = {
           host = "virtus";
           inherit self inputs username;
-      }
+        };
+      };
     };
   };
 }
