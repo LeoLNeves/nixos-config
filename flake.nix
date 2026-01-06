@@ -45,6 +45,16 @@
           inherit self inputs username domain personal_website;
         };
       };
+
+      virtus = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/virtus
+        ]
+        specialArgs = {
+          host = "virtus";
+          inherit self inputs username;
+      }
     };
   };
 }
