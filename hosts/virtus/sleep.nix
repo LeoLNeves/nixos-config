@@ -22,10 +22,4 @@
       unitConfig.DefaultDependencies = "no";
     };
   };
-
-  environment.shellAliases = {
-    server-mode = "sudo systemctl isolate multi-user.target";
-    
-    desktop-mode = "sudo systemctl isolate graphical.target";
-  };
 }
