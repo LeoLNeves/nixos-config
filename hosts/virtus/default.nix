@@ -144,6 +144,8 @@
     enable = true;
     settings.PasswordAuthentication = false;
     settings.KbdInteractiveAuthentication = false;
+    settings.ClientAliveInterval = 60;
+    settings.ClientAliveCountMax = 2;
   };
 
   # Open ports in the firewall.
