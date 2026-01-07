@@ -2,6 +2,6 @@
 {
     imports = [
         ./hardware.nix
-        ./../../modules
+        ./../../modules/core
     ];
 }

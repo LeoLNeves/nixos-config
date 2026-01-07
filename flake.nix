@@ -53,7 +53,7 @@
         ];
         specialArgs = {
           host = "virtus";
-          inherit self inputs username;
+          inherit self inputs username domain personal_website;
         };
       };
     };
