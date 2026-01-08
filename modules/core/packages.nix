@@ -13,6 +13,7 @@
     vscode
     docker 
     rclone
+    libreoffice-fresh
     zip
     ];
 }
