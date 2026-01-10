@@ -30,7 +30,7 @@
         ];
         specialArgs = {
           host = "shire";
-          inherit self inputs username;
+          inherit self inputs username domain;
         };
       };
 
