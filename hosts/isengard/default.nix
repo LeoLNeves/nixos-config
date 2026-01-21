@@ -24,6 +24,8 @@
 
   networking.hostName = host;
 
+  networking.firewall.allowedTCPPorts = [ 38500 ];
+
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = map lib.lowPrio [
