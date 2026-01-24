@@ -15,6 +15,12 @@
                 '';
             };
 
+            "media.${domain}" = {
+                extraConfig = ''
+                reverse_proxy localhost:8096
+                '';
+            };
+
             "music.${domain}" = {
                 extraConfig = ''
                 reverse_proxy localhost:4533
