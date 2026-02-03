@@ -43,6 +43,32 @@
     nameservers = ["1.1.1.1" "193.136.164.1" "193.136.164.2" "1.0.0.1"];
   };
 
+      services.printing = {
+        enable = true;
+        drivers = [ pkgs.brlaser ]; 
+    };
+
+    hardware.printers = {
+        ensurePrinters = [
+        {
+            name = "Brother_MFC_L8900CDW";
+
+            model = "everywhere"; 
+
+            deviceUri = "ipp://print.rnl.tecnico.ulisboa.pt/ipp/print";
+
+            description = "DEI/RNL Printer | Brother MFC-L8900CDW";
+            location = "DEI";
+
+            ppdOptions = {
+            PageSize = "A4"; 
+            };
+        }
+        ];
+
+        ensureDefaultPrinter = "Brother_MFC_L8900CDW";
+    };
+
 
   # Set your time zone.
   time.timeZone = "Europe/Lisbon";
@@ -79,8 +105,6 @@
   # Configure console keymap
   console.keyMap = "pt-latin1";
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
