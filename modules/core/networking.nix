@@ -1,6 +1,12 @@
 { host, pkgs, ... }:
 {
 
+    systemd.services.ensure-printers = {
+        # Force printer setup to wait for the VPN to be UP
+        after = [ "network-online.target" "wireguard-wg1.service" ]; 
+        requires = [ "network-online.target" ];
+    };
+
     networking.wireguard.interfaces.wg1 = {
     # Recovered from the startup script
     ips = [ 
