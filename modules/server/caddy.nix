@@ -14,6 +14,13 @@
                 encode gzip
                 '';
             };
+            
+            "temporary.${domain}" = {
+                extraConfig = ''
+                root * /var/lib/temp
+                file_server
+                '';
+            };
 
             "media.${domain}" = {
                 extraConfig = ''
