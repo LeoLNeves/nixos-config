@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware.nix
       ./sleep.nix
+      ./printer.nix
       ../../modules/server
     ];
 
