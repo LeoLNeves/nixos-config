@@ -16,5 +16,7 @@
         rclone
         libreoffice-fresh
         zip
+        jdk17
+        maven
     ];
 }
