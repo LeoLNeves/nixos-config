@@ -16,5 +16,6 @@
         rclone
         libreoffice-fresh
         zip
+        rustc
     ];
 }
