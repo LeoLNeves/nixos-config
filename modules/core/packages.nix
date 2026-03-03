@@ -17,5 +17,6 @@
         libreoffice-fresh
         zip
         rustc
+        cargo
     ];
 }
