@@ -5,5 +5,6 @@
         ./n8n.nix
         ./navidrome.nix
         ./jellyfin.nix
+        ./vaultwarden.nix
     ];
 }

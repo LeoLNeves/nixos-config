@@ -39,6 +39,12 @@
                 reverse_proxy localhost:5678
                 '';
             };
+
+            "vault.${domain}" = {
+                extraConfig = ''
+                reverse_proxy localhost:8200
+                '';
+            };
         };
     };
 }
