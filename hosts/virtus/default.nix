@@ -149,6 +149,7 @@
   dbeaver-bin
   discord
   spotify
+  firefox
   git
   vscode
   mattermost-desktop
