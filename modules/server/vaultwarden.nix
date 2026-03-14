@@ -7,7 +7,7 @@
       ROCKET_ADDRESS = "127.0.0.1";
       ROCKET_PORT = 8200;
       
-      SIGNUPS_ALLOWED = false;
+      SIGNUPS_ALLOWED = true;
       DOMAIN = "https://vault.\${domain}"; 
     };
   };
