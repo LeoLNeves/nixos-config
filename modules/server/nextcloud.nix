@@ -5,7 +5,7 @@
     enable = true;
     hostName = "cloud.${domain}";
     
-    package = pkgs.nextcloud31; 
+    package = pkgs.nextcloud32; 
     
     database.createLocally = true; 
 
