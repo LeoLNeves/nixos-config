@@ -50,6 +50,7 @@
                 extraConfig = ''
                 reverse_proxy localhost:8280
                 '';
+            };
         };
     };
 }
