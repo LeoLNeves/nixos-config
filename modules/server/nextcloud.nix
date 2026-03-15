@@ -5,9 +5,11 @@
     enable = true;
     hostName = "cloud.${domain}";
     
-    package = pkgs.nextcloud30; 
+    package = pkgs.nextcloud31; 
     
     database.createLocally = true; 
+
+    config.dbtype = "pgsql";
     
     configureRedis = true;
     maxUploadSize = "16G";
