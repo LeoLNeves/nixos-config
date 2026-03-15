@@ -51,6 +51,12 @@
                 reverse_proxy localhost:8280
                 '';
             };
+
+            "dms.${domain}" = {
+                extraConfig = ''
+                reverse_proxy localhost:8081
+                '';
+            };
         };
     };
 }

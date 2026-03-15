@@ -16,6 +16,15 @@
     
     https = true; 
 
+    extraAppsEnable = true;
+    extraApps = {
+      mail = pkgs.fetchNextcloudApp {
+        sha256 = "sha256-hmIWE1Z8NqTAqnNPryGf6r0tL+XA4wARil5rCOglEuI=";
+        url = "https://github.com/nextcloud-releases/mail/releases/download/v3.7.1/mail-v3.7.1.tar.gz";
+        license = "agpl3Plus";
+      };
+    };
+
     config = {
       adminuser = "admin";
       adminpassFile = "/var/secrets/nextcloud-admin-pass"; 
