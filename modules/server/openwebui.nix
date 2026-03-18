@@ -12,8 +12,8 @@
       ENABLE_TAGS_GENERATION = "False";
       ENABLE_CHANNELS = "False";
       
-      ENABLE_SIGNUP = "Olympia";
-      WEBUI_NAME = "";
+      ENABLE_SIGNUP = "False";
+      WEBUI_NAME = "Olympia";
       ENABLE_PERSISTENT_CONFIG = "False";
     };
   };
