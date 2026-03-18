@@ -14,19 +14,6 @@
                 encode gzip
                 '';
             };
-            
-            "temporary.${domain}" = {
-                extraConfig = ''
-                root * /var/lib/temp
-                file_server
-                '';
-            };
-
-            "media.${domain}" = {
-                extraConfig = ''
-                reverse_proxy localhost:8096
-                '';
-            };
 
             "music.${domain}" = {
                 extraConfig = ''
@@ -40,9 +27,9 @@
                 '';
             };
 
-            "cloud.${domain}" = {
+            "ai.${domain}" = {
                 extraConfig = ''
-                reverse_proxy localhost:8280
+                reverse_proxy localhost:7860
                 '';
             };
         };
