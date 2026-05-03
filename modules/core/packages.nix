@@ -6,6 +6,7 @@
         wireguard-tools
         brave
         mattermost-desktop
+        maven
         discord
         neovim
         obsidian
