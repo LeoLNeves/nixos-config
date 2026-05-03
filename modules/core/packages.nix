@@ -7,6 +7,7 @@
         brave
         mattermost-desktop
         maven
+        jdk
         discord
         neovim
         obsidian
