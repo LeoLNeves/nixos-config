@@ -32,6 +32,12 @@
                 reverse_proxy localhost:7860
                 '';
             };
+            
+            "capture.${domain}" = {
+                extraConfig = ''
+                reverse_proxy localhost:3000
+                '';
+            };
         };
     };
 }
