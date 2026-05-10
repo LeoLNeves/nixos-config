@@ -7,10 +7,12 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
     personal_website.url = "github:LeoLNeves/personal_website";
     personal_website.flake = false;
+    caddyr_theme.url = "github:LeoLNeves/drive-caddy";
+    caddyr_theme.flake = false;
   };
 
   outputs = 
-  { self, nixpkgs, personal_website, ... }@inputs:
+  { self, nixpkgs, personal_website, caddyr_theme, ... }@inputs:
   let
     username = "leo";
     domain = "leonardoneves.com";
@@ -53,7 +55,7 @@
         ];
         specialArgs = {
           host = "virtus";
-          inherit self inputs username domain personal_website;
+          inherit self inputs username domain personal_website caddyr_theme;
         };
       };
     };
