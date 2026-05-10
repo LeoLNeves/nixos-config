@@ -56,7 +56,6 @@
                     file_server {
                         # Point browse directly to the template in your Nix store
                         browse ${caddyr_theme}/caddyr.tpl
-                        index off
                     }
                 }
                 encode gzip

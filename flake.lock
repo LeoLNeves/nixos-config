@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "caddyr_theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1778374417,
+        "narHash": "sha256-jpB9mzyCDnxeEo+WvASrrfFnrGjlH3O58qekO8ritjA=",
+        "owner": "LeoLNeves",
+        "repo": "drive-caddy",
+        "rev": "177fb7e1d7a04671238dfcbfb29a0e147b171741",
+        "type": "github"
+      },
+      "original": {
+        "owner": "LeoLNeves",
+        "repo": "drive-caddy",
+        "type": "github"
+      }
+    },
     "disko": {
       "inputs": {
         "nixpkgs": [
@@ -54,6 +70,7 @@
     },
     "root": {
       "inputs": {
+        "caddyr_theme": "caddyr_theme",
         "disko": "disko",
         "nixpkgs": "nixpkgs",
         "personal_website": "personal_website"
