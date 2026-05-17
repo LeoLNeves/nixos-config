@@ -71,7 +71,7 @@
       bindm = SUPER, mouse:273, resizewindow
       bindm = SUPER, mouse:272, movewindow
 
-      bind = SUPER, Return, exec, wezterm
+      bind = SUPER, Return, exec, alacritty
       bind = SUPER, Space, exec, wofi --show drun
       bind = SUPER, Q, killactive
       bind = SUPER_SHIFT, M, exit
