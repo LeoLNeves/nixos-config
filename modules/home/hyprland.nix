@@ -102,6 +102,7 @@
       bind = SUPER_SHIFT, 5, movetoworkspacesilent, 5
 
       exec-once = waybar
+      exec-once = hyprpaper
     '';
   };
 }

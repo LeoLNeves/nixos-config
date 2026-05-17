@@ -11,6 +11,8 @@
     ./shell.nix
     ./vicinae.nix
     ./waybar.nix
+    ./hyprpaper.nix
+    ./tmux.nix
   ];
 
   # 2. Core settings
