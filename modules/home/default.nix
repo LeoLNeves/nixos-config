@@ -8,6 +8,8 @@
     ./neovim.nix
     ./starship.nix
     ./fastfetch.nix
+    ./shell.nix
+    ./rofi.nix
   ];
 
   # 2. Core settings
