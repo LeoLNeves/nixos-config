@@ -10,7 +10,7 @@
   # You can start adding user-specific packages here
   home.packages = with pkgs; [
     htop
-    neofetch
+    fastfetch
   ];
 
   # --- New Neovim Configuration ---

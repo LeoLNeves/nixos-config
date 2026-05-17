@@ -3,11 +3,11 @@
     "caddyr_theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1778374417,
-        "narHash": "sha256-jpB9mzyCDnxeEo+WvASrrfFnrGjlH3O58qekO8ritjA=",
+        "lastModified": 1778455880,
+        "narHash": "sha256-HBQZTVPtRnZmZWuTvrM45fnFGam8r4CuJRu9uBivkAQ=",
         "owner": "LeoLNeves",
         "repo": "drive-caddy",
-        "rev": "177fb7e1d7a04671238dfcbfb29a0e147b171741",
+        "rev": "f568b2291b6d7f5d1f1d34a63829922f051efbd7",
         "type": "github"
       },
       "original": {
@@ -23,11 +23,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773506317,
-        "narHash": "sha256-qWKbLUJpavIpvOdX1fhHYm0WGerytFHRoh9lVck6Bh0=",
+        "lastModified": 1777713215,
+        "narHash": "sha256-8GzXDOXckDWwST8TY5DbwYFjdvQLlP7K9CLSVx6iTTo=",
         "owner": "nix-community",
         "repo": "disko",
-        "rev": "878ec37d6a8f52c6c801d0e2a2ad554c75b9353c",
+        "rev": "63b4e7e6cf75307c1d26ac3762b886b5b0247267",
         "type": "github"
       },
       "original": {
@@ -36,13 +36,33 @@
         "type": "github"
       }
     },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1779027260,
+        "narHash": "sha256-ZbgWWFQmSyM3HQ31nAZk2hJ7OSeNr9uRFHL8jCifY9M=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "bcb774cfc3268120cd61808629f9aa7dad3750a2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1773389992,
-        "narHash": "sha256-wvfdLLWJ2I9oEpDd9PfMA8osfIZicoQ5MT1jIwNs9Tk=",
+        "lastModified": 1777954456,
+        "narHash": "sha256-hGdgeU2Nk87RAuZyYjyDjFL6LK7dAZN5RE9+hrDTkDU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c06b4ae3d6599a672a6210b7021d699c351eebda",
+        "rev": "549bd84d6279f9852cae6225e372cc67fb91a4c1",
         "type": "github"
       },
       "original": {
@@ -72,6 +92,7 @@
       "inputs": {
         "caddyr_theme": "caddyr_theme",
         "disko": "disko",
+        "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "personal_website": "personal_website"
       }

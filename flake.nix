@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     personal_website.url = "github:LeoLNeves/personal_website";
@@ -12,7 +14,7 @@
   };
 
   outputs = 
-  { self, nixpkgs, personal_website, caddyr_theme, ... }@inputs:
+  { self, nixpkgs, home-manager, personal_website, caddyr_theme, ... }@inputs:
   let
     username = "leo";
     domain = "leonardoneves.com";
