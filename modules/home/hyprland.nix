@@ -3,6 +3,7 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "hyprlang";
     
     extraConfig = ''
       monitor=,preferred,auto,1
@@ -72,7 +73,7 @@
       bindm = SUPER, mouse:272, movewindow
 
       bind = SUPER, Return, exec, alacritty
-      bind = SUPER, Space, exec, wofi --show drun
+      bind = SUPER, Space, exec, rofi -show combi
       bind = SUPER, Q, killactive
       bind = SUPER_SHIFT, M, exit
       bind = SUPER_SHIFT, F, fullscreen, 0

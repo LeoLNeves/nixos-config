@@ -1,9 +1,6 @@
 { config, pkgs, ... }: {
   programs.rofi = {
-    enable = true;
-    
-    # <-- ADD THIS LINE to make it work on Hyprland -->
-    package = pkgs.rofi-wayland; 
+    enable = true; 
 
     extraConfig = {
       terminal = "alacritty";
