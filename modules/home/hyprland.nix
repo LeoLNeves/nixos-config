@@ -73,7 +73,7 @@
       bindm = SUPER, mouse:272, movewindow
 
       bind = SUPER, Return, exec, alacritty
-      bind = SUPER, Space, exec, rofi -show combi
+      bind = SUPER, Space, exec, vicinae toggle
       bind = SUPER, Q, killactive
       bind = SUPER_SHIFT, M, exit
       bind = SUPER_SHIFT, F, fullscreen, 0
@@ -100,6 +100,8 @@
       bind = SUPER_SHIFT, 3, movetoworkspacesilent, 3
       bind = SUPER_SHIFT, 4, movetoworkspacesilent, 4
       bind = SUPER_SHIFT, 5, movetoworkspacesilent, 5
+
+      exec-once = waybar
     '';
   };
 }

@@ -9,7 +9,8 @@
     ./starship.nix
     ./fastfetch.nix
     ./shell.nix
-    ./rofi.nix
+    ./vicinae.nix
+    ./waybar.nix
   ];
 
   # 2. Core settings
