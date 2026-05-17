@@ -11,6 +11,5 @@
         ./services.nix
         ./state.nix
         ./users.nix
-        ./bottles.nix
     ];
 }
