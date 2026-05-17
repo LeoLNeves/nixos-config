@@ -49,7 +49,8 @@
 
       # Standard Input
       input = {
-        sensitivity = -0.7;
+	kb_layout = "pt";
+        sensitivity = 0;
         scroll_method = "2 fg";
         touchpad = {
           natural_scroll = true;
