@@ -95,6 +95,7 @@
       bind = SUPER, 3, workspace, 3
       bind = SUPER, 4, workspace, 4
       bind = SUPER, 5, workspace, 5
+      bind = SUPER, L, exec, hyprlock
       
       bind = SUPER_SHIFT, 1, movetoworkspacesilent, 1
       bind = SUPER_SHIFT, 2, movetoworkspacesilent, 2
