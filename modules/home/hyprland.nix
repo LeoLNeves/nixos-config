@@ -75,6 +75,7 @@
       bind = SUPER, Return, exec, alacritty
       bind = SUPER, Space, exec, vicinae toggle
       bind = SUPER, Q, killactive
+      bind = SUPER, V, togglefloating,
       bind = SUPER_SHIFT, M, exit
       bind = SUPER_SHIFT, F, fullscreen, 0
       bind = SUPER_SHIFT, Space, togglefloating
