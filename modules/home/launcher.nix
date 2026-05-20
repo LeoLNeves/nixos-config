@@ -11,8 +11,8 @@
     allow_images=true
     allow_markup=true
     insensitive=true
-    width=420
-    height=360
+    width=300
+    height=400
     layer=overlay
     location=center
   '';
