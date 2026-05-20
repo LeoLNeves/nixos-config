@@ -13,6 +13,7 @@
     ./hyprpaper.nix
     ./hyprlock.nix
     ./tmux.nix
+    ./waybar.nix
   ];
 
   # 2. Core settings
