@@ -26,6 +26,7 @@
         ];
         modules-right = [
           "custom/l_end"
+	  "pulseaudio"
           "network"
           "bluetooth"
           "battery"
@@ -55,6 +56,23 @@
           "format-disconnected" = "󰖪 ";
           "tooltip-format-disconnected" = "Disconnected";
           "interval" = 2;
+        };
+
+	"pulseaudio" = {
+          "format" = "{icon} {volume}%";
+          "format-bluetooth" = "{icon} {volume}%";
+          "format-muted" = "󰖁 Muted";
+          "format-icons" = {
+            "headphone" = "";
+            "hands-free" = "";
+            "headset" = "";
+            "phone" = "";
+            "portable" = "";
+            "car" = "";
+            "default" = ["" "" ""];
+          };
+          "scroll-step" = 5;
+          "on-click" = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
         };
 
         "battery" = {
@@ -120,17 +138,22 @@
         "custom/padd" = { "format" = "  "; "interval" = "once"; "tooltip" = false; };
       };
     };
-    
+
     style = let
-      bar_bg = "rgba(23, 28, 34, 0.95)";
-      main_bg = "#101419";
-      main_fg = "#93cee9";
+      # --- Your New Custom Wallpaper Palette ---
+      color_black = "#110F14";
+      color_blue  = "#16466F";
+      color_red   = "#B73747";
+      color_white = "#DDE5E6";
 
-      wb_act_bg = "#90ceaa";
-      wb_act_fg = "#1f2328";
-
-      wb_hvr_bg = "#90ceaa";
-      wb_hvr_fg = "#1f2328";
+      # --- Mapping Palette to Waybar Elements ---
+      bar_bg = "rgba(17, 15, 20, 0.95)"; 
+      main_bg = color_black; 
+      main_fg = color_white; 
+      wb_act_bg = color_blue; 
+      wb_act_fg = color_white; 
+      wb_hvr_bg = color_blue;
+      wb_hvr_fg = color_white;
     in ''
       * {
           border: none;
@@ -216,6 +239,14 @@
           color: ${wb_hvr_fg};
           animation: tb_hover 20s ease-in-out 1;
           transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+      }
+
+      /* Make critical states pop using your custom red */
+      #battery.critical, #battery.warning {
+          color: ${color_red};
+      }
+      #memory.critical {
+          color: ${color_red};
       }
 
       #backlight,
