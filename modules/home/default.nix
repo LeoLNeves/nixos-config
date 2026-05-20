@@ -7,10 +7,10 @@
     ./alacritty.nix
     ./neovim.nix
     ./starship.nix
-    ./fastfetch.nix
-    ./shell.nix
     ./vicinae.nix
     ./waybar.nix
+    ./fastfetch.nix
+    ./shell.nix
     ./hyprpaper.nix
     ./tmux.nix
   ];

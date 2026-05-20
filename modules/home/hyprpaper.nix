@@ -9,7 +9,7 @@
 
       wallpaper = {
         monitor = "";
-        path = "~/wallpaper.jpg";
+        path = "~/wallpaper.png";
         fit_mode = "";
       };
     };
