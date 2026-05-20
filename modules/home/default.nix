@@ -7,8 +7,7 @@
     ./alacritty.nix
     ./neovim.nix
     ./starship.nix
-    ./vicinae.nix
-    ./waybar.nix
+    ./launcher.nix
     ./fastfetch.nix
     ./shell.nix
     ./hyprpaper.nix

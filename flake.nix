@@ -11,8 +11,6 @@
     personal_website.flake = false;
     caddyr_theme.url = "github:LeoLNeves/drive-caddy";
     caddyr_theme.flake = false;
-    vicinae-extensions.url = "github:vicinaehq/extensions";
-    vicinae-extensions.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = 
