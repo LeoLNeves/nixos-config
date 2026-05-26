@@ -19,6 +19,8 @@
         libreoffice-fresh
         zip
         rustc
+	blender
+	gimp
         cargo
     ];
 }

@@ -9,7 +9,6 @@
     ./starship.nix
     ./launcher.nix
     ./fastfetch.nix
-    ./shell.nix
     ./hyprpaper.nix
     ./hyprlock.nix
     ./tmux.nix
