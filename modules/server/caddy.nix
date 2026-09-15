@@ -21,6 +21,12 @@
                 '';
             };
 
+	    "dstclub.pt" = {
+	    	extraConfig = ''
+		reverse_proxy localhost:8080
+		'';
+	    };
+
             "vault.${domain}" = {
                 extraConfig = ''
                 reverse_proxy localhost:8200
@@ -35,9 +41,15 @@
             
             "capture.${domain}" = {
                 extraConfig = ''
-                reverse_proxy localhost:3000
+                reverse_proxy localhost:31500
                 '';
             };
+
+	    "media.${domain}" = {
+	    	extraConfig = ''
+		reverse_proxy localhost:8096
+		'';
+	    };
 
             "drive.${domain}" = {
                 extraConfig = ''

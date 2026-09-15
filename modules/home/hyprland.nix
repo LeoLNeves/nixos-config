@@ -105,6 +105,11 @@
 
       exec-once = waybar
       exec-once = hyprpaper
+
+      # Audio Volume Controls (using wpctl from wireplumber)
+      bind = , XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+      bind = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+      bind = , XF86AudioMute,        exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
     '';
   };
 }

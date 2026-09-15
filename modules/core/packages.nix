@@ -19,7 +19,10 @@
         libreoffice-fresh
         zip
         rustc
+        opencode
 	blender
+	vlc
+	qbittorrent
 	gimp
         cargo
     ];

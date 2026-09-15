@@ -9,7 +9,7 @@
     show=drun
     prompt=Search apps
     allow_images=true
-    allow_markup=true
+    allow_markup=false
     insensitive=true
     width=300
     height=400
