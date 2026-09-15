@@ -10,7 +10,6 @@
       ./hardware.nix
       ./sleep.nix
       ./printer.nix
-      ../../modules/server
     ];
 
   # Bootloader.
