@@ -25,5 +25,36 @@
 	qbittorrent
 	gimp
         cargo
+
+              file
+              util-linux # Provides hexdump
+              xxd
+	      sox
+	      wget
+              binutils   # Provides strings
+              unzip
+	      mkvtoolnix
+	      ffmpeg
+ 	      p7zip
+	      git-lfs
+	      poppler-utils
+      	      ripgrep
+	      jq
+              john       # John the Ripper (includes zip2john)
+              wordlists  # Packaged wordlists (e.g., RockYou)
+              python3
+
+              # --- Steganography & Forensics ---
+              steghide
+              zsteg
+              exiftool
+              binwalk
+              foremost
+
+              # --- Additional Cracking Tools ---
+              fcrackzip
+              stegseek
+              hashcat
+
     ];
 }
