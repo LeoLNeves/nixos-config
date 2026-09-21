@@ -47,6 +47,7 @@
   users.users.root.openssh.authorizedKeys.keys =
   [
     # change this to your ssh key
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAION9JRZJSRZjIyfY700Wf3bgmFDr0ePbI3uAemci/GOn rodrigo.teixeira@dstclub.tecnico.ulisboa.pt"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDMMw9d91MxgIrOfr5ucAJaIVUCBRog93x21SEbLlGOh leonardo.neves@tecnico.ulisboa.pt"
   ] ++ (args.extraPublicKeys or []); # this is used for unit-testing this module and can be removed if not needed
 
