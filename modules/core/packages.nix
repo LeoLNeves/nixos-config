@@ -45,6 +45,8 @@
               john       # John the Ripper (includes zip2john)
               wordlists  # Packaged wordlists (e.g., RockYou)
               python3
+	      python313Packages.numpy
+	      python314Packages.pillow
 
               # --- Steganography & Forensics ---
               steghide
