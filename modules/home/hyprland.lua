@@ -107,6 +107,7 @@ local mainMod = "SUPER"
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("alacritty"))
 hl.bind(mainMod .. " + Space",  hl.dsp.exec_cmd("wofi --show drun"))
 hl.bind(mainMod .. " + L",      hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("powermenu"))
 
 -- Windows
 hl.bind(mainMod .. " + Q",             hl.dsp.window.close())
@@ -140,7 +141,40 @@ hl.bind("SHIFT + Print",           hl.dsp.exec_cmd("screenshot screen"))
 hl.bind(mainMod .. " + R",         hl.dsp.exec_cmd("screenrecord region"))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("screenrecord screen"))
 
--- Volume keys (wpctl comes with wireplumber)
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"))
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
-hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
+-- The laptop's special keys below also work on the lock screen (locked),
+-- and the volume/brightness ones repeat while held down (repeating)
+local held = { locked = true, repeating = true }
+local once = { locked = true }
+
+-- Volume keys (wpctl comes with wireplumber). "-l 1" stops the volume at 100%
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), held)
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),      held)
+hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),     once)
+hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   once)
+
+-- Screen brightness. "-n 2" keeps the screen from going fully black
+hl.bind("XF86MonBrightnessUp",   hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), held)
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), held)
+
+-- Keyboard backlight
+hl.bind("XF86KbdBrightnessUp",   hl.dsp.exec_cmd("brightnessctl -d asus::kbd_backlight set 1+"), once)
+hl.bind("XF86KbdBrightnessDown", hl.dsp.exec_cmd("brightnessctl -d asus::kbd_backlight set 1-"), once)
+
+-- Media keys (Spotify, browser videos, ...)
+hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), once)
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), once)
+hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       once)
+hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   once)
+
+----------------------
+---- WINDOW RULES ----
+----------------------
+
+-- Small menus opened from the bar (Wi-Fi, bluetooth, volume mixer) float in the middle
+hl.window_rule({
+    name   = "floating-menus",
+    match  = { class = "^(nmtui|bluetuith|org.pulseaudio.pavucontrol)$" },
+    float  = true,
+    size   = { 900, 600 },
+    center = true,
+})

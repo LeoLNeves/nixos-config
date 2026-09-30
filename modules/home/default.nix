@@ -14,6 +14,7 @@
     ./tmux.nix
     ./waybar.nix
     ./screenshot.nix
+    ./notifications.nix
   ];
 
   # 2. Core settings
