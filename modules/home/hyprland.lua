@@ -131,6 +131,15 @@ end
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
+-- Screenshots: saved to ~/Pictures/Screenshots and copied to the clipboard
+hl.bind("Print",                   hl.dsp.exec_cmd("screenshot region"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("screenshot region"))
+hl.bind("SHIFT + Print",           hl.dsp.exec_cmd("screenshot screen"))
+
+-- Screen recording: press once to start, again to stop. Saved to ~/Videos/Recordings
+hl.bind(mainMod .. " + R",         hl.dsp.exec_cmd("screenrecord region"))
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("screenrecord screen"))
+
 -- Volume keys (wpctl comes with wireplumber)
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"))
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))

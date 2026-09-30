@@ -13,6 +13,7 @@
     ./hyprlock.nix
     ./tmux.nix
     ./waybar.nix
+    ./screenshot.nix
   ];
 
   # 2. Core settings

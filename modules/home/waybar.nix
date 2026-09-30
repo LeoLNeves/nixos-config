@@ -17,6 +17,7 @@
         ];
         
         modules-right = [
+          "custom/recording"
           "pulseaudio"
           "network"
           "bluetooth"
@@ -30,6 +31,16 @@
           "all-outputs" = true;
           "on-click" = "activate";
           "format" = "{name}";
+        };
+
+        # Only visible while a screen recording is running; click to stop it
+        "custom/recording" = {
+          "exec" = "pgrep -x wf-recorder > /dev/null && echo '⏺  REC' || echo";
+          "interval" = "once";
+          "signal" = 8;
+          "format" = "{}";
+          "tooltip" = false;
+          "on-click" = "screenrecord";
         };
 
         "clock" = {
@@ -143,6 +154,11 @@
       #custom-power {
         padding: 0 12px;
         color: ${blue}; /* Icons use your accent blue */
+      }
+
+      #custom-recording {
+        padding: 0 12px;
+        color: ${red};
       }
 
       /* Muted Audio uses red */
