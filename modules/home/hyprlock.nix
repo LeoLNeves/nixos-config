@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 let
   font = "JetBrainsMono Nerd Font";
 
@@ -27,7 +27,7 @@ in
       background = [
         {
           monitor = "";
-          path = "${config.home.homeDirectory}/wallpaper.png";
+          path = "${../../wallpapers/wallpaper.jpg}"; # same file as the desktop and login screen
           blur_passes = 3;
           blur_size = 6;
           brightness = 0.55;

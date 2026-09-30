@@ -4,6 +4,7 @@
         ./audio.nix
         ./boot.nix
         ./desktop.nix
+        ./login.nix
         ./locale.nix
         ./networking.nix
         ./nix.nix

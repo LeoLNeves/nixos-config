@@ -1,8 +1,6 @@
 { pkgs, ... }:
 {
-  # Login screen. GDM works on its own, without the GNOME desktop
-  services.displayManager.gdm.enable = true;
-  services.displayManager.defaultSession = "hyprland";
+  # The login screen is in login.nix
 
   # Things the GNOME desktop used to turn on for us
   hardware.bluetooth.enable = true;

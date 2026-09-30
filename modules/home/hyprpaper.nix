@@ -9,7 +9,7 @@
 
       wallpaper = {
         monitor = "";
-        path = "~/wallpaper.png";
+        path = "${../../wallpapers/wallpaper.jpg}"; # same file as the lock and login screens
         fit_mode = "";
       };
     };
