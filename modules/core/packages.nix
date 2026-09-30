@@ -20,7 +20,7 @@
         vscode
         docker 
         rclone
-        libreoffice-fresh
+        libreoffice
         zip
         rustc
         opencode

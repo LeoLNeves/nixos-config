@@ -7,6 +7,7 @@
     viAlias = true;
     vimAlias = true;
     withPython3 = false; # Kept false to prevent system evaluation warnings
+    withRuby = false;
     withNodeJs = true;   # Enabled for modern javascript/typescript plugins
   };
 

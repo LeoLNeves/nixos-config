@@ -26,7 +26,7 @@
 
   battery = let
     percentage = pkgs.writeShellScript "percentage" (
-      if pkgs.stdenv.isDarwin
+      if pkgs.stdenv.hostPlatform.isDarwin
       then ''
         echo $(pmset -g batt | grep -o "[0-9]\+%" | tr '%' ' ')
       ''
@@ -36,7 +36,7 @@
       ''
     );
     state = pkgs.writeShellScript "state" (
-      if pkgs.stdenv.isDarwin
+      if pkgs.stdenv.hostPlatform.isDarwin
       then ''
         echo $(pmset -g batt | awk '{print $4}')
       ''

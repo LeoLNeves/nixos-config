@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ config, pkgs, username, ... }:
 
 {
   # 1. Import all your separate modules
@@ -39,9 +39,11 @@
       package = pkgs.adwaita-icon-theme;
       size = 24;
     };
+    gtk4.theme = config.gtk.theme;
   };
 
   home.pointerCursor = {
+    enable = true;
     gtk.enable = true;
     x11.enable = true;
     package = pkgs.adwaita-icon-theme;
