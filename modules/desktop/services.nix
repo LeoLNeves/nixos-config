@@ -1,7 +1,5 @@
 { pkgs, ... }:
 {
-  # The login screen is in login.nix
-
   # Things the GNOME desktop used to turn on for us
   hardware.bluetooth.enable = true;
   services.upower.enable = true; # battery info (waybar, low battery warnings)
@@ -11,7 +9,7 @@
   services.avahi.enable = true; # finds printers and devices on the network
   services.libinput.enable = true; # touchpad fixes for this laptop model
   services.gnome.gnome-keyring.enable = true; # saved passwords (browser, VS Code, ...)
-  services.gnome.gcr-ssh-agent.enable = true; # remembers your SSH key for git
+  services.gnome.gcr-ssh-agent.enable = true; # SSH agent for git
   services.gnome.glib-networking.enable = true; # lets GTK apps use HTTPS
   services.gnome.at-spi2-core.enable = true; # accessibility, some GTK apps expect it
   services.gnome.sushi.enable = true; # press Space in Files to preview a file
@@ -19,14 +17,4 @@
 
   # Default font of GTK apps
   fonts.packages = [ pkgs.adwaita-fonts ];
-
-  # Apps that used to come with GNOME and are still in use
-  environment.systemPackages = with pkgs; [
-    nautilus # Files
-    snapshot # Camera
-    baobab # Disk Usage Analyzer
-    gnome-calculator # Calculator
-    showtime # Video player
-    decibels # Audio player
-  ];
 }
