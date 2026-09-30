@@ -3,7 +3,7 @@
     imports = [
         ./audio.nix
         ./boot.nix
-        ./gnome.nix
+        ./desktop.nix
         ./locale.nix
         ./networking.nix
         ./nix.nix
