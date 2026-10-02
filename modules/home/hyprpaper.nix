@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{...}: {
+  # The service already installs and starts hyprpaper
   services.hyprpaper = {
     enable = true;
 
@@ -14,6 +15,4 @@
       };
     };
   };
-
-  home.packages = with pkgs; [hyprpaper];
 }

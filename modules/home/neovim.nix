@@ -27,6 +27,6 @@
 
     # System Utilities
     gdu       # Disk usage analyzer
-    ripgrep   # Fast text search engine (Crucial for Neovim telescopes)
+    # ripgrep (needed by Neovim telescope) is installed in modules/desktop/dev.nix
   ];
 }

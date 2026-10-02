@@ -1,12 +1,6 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  # Enable Hyprland
+  # Enable Hyprland (its own config lives in modules/home/hyprland.nix)
   programs.hyprland.enable = true;
-
-  # Optional but highly recommended: an application launcher and a terminal
-  environment.systemPackages = with pkgs; [
-    kitty      # A great default terminal for Wayland
-    wofi       # A simple app launcher
-  ];
 }

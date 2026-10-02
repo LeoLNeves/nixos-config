@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   # WireGuard VPN to Técnico's network
   networking.wireguard.interfaces.wg1 = {
@@ -32,6 +32,5 @@
       }
     ];
   };
-
-  environment.systemPackages = [ pkgs.wireguard-tools ];
+  # The wg command (wireguard-tools) is installed automatically by the setting above
 }

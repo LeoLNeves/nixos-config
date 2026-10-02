@@ -4,7 +4,6 @@
   imports = [
     ./locale.nix
     ./nix.nix
-    ./ssh.nix
     ./users.nix
   ];
 

@@ -3,12 +3,11 @@
   # Lets downloaded programs that weren't built for NixOS run
   programs.nix-ld.enable = true;
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker.enable = true; # also installs the docker command
 
   # Programming and command-line tools
   environment.systemPackages = with pkgs; [
-    # Editors
-    neovim
+    # Editors (neovim is set up in modules/home/neovim.nix)
     vscode
     opencode
 
@@ -24,14 +23,12 @@
     git-lfs
 
     # Command-line tools
-    docker
     rclone
     wget
     jq
     ripgrep
     file
-    util-linux # Provides hexdump
-    xxd
+    xxd # (hexdump comes with NixOS already)
     binutils # Provides strings
     poppler-utils # PDF tools (pdftotext, ...)
 
