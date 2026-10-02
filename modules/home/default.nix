@@ -11,6 +11,7 @@
     ./fastfetch.nix
     ./hyprpaper.nix
     ./hyprlock.nix
+    ./hypridle.nix
     ./tmux.nix
     ./waybar.nix
     ./screenshot.nix
