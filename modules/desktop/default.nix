@@ -9,7 +9,6 @@
     ./home.nix
     ./hyprland.nix
     ./login.nix
-    ./networking.nix
     ./services.nix
   ];
 }

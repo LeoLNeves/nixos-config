@@ -57,7 +57,8 @@
         ];
         specialArgs = {
           host = "virtus";
-          inherit self inputs username domain personal_website caddyr_theme;
+          username = "virtus"; # this machine was installed with a "virtus" user, so keep it
+          inherit self inputs domain personal_website caddyr_theme;
         };
       };
     };

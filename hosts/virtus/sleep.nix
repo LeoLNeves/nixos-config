@@ -1,9 +1,7 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
-  
-  services.displayManager.gdm.autoSuspend = false;
-
+  # This machine never sleeps or suspends
   systemd.targets = {
     sleep = {
       enable = false;

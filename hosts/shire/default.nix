@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware.nix
+    ./networking.nix
     ./vpn.nix
     ../../modules/common
     ../../modules/desktop
