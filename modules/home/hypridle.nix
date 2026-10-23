@@ -19,18 +19,18 @@ in
       listener = [
         # After 1 minute: lock
         {
-          timeout = 60;
+          timeout = 530;
           on-timeout = "loginctl lock-session";
         }
         # A few seconds later: display off (move the mouse or press a key to turn it back on)
         {
-          timeout = 63;
+          timeout = 600;
           on-timeout = screen "off";
           on-resume = screen "on";
         }
         # After 10 minutes: suspend (sleep), like closing the lid
         {
-          timeout = 600;
+          timeout = 630;
           on-timeout = "systemctl suspend";
         }
       ];
